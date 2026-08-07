@@ -751,7 +751,7 @@ vendor/lib64/vendor.qti.hardware.trustedui@1.2.so
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
 # Wi-Fi
-vendor/bin/cnss-daemon;MODULE_SUFFIX=_xiaomi;OVERRIDES=cnss-daemon
+vendor/bin/cnss-daemon;MODULE_SUFFIX=_xiaomi;MAKE_COPY_RULE_ONLY
 
 # Wi-Fi Display
 vendor/bin/wfdhdcphalservice
