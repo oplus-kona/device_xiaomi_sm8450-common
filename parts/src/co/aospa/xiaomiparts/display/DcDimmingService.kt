@@ -33,7 +33,7 @@ class DcDimmingService : Service() {
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         dlog(TAG, "Starting service")
         contentResolver.registerContentObserver(
-            Settings.System.getUriFor(Settings.System.DC_DIMMING_STATE),
+            Settings.System.getUriFor("dc_dimming_state"),
             false,
             settingObserver,
             UserHandle.USER_CURRENT,
@@ -51,7 +51,7 @@ class DcDimmingService : Service() {
     override fun onBind(intent: Intent?): IBinder? = null
 
     private fun updateDcDimming() {
-        val enabled = Settings.System.getInt(contentResolver, Settings.System.DC_DIMMING_STATE, 0)
+        val enabled = Settings.System.getInt(contentResolver, "dc_dimming_state", 0)
         dlog(TAG, "updateDcDimming: enabled=$enabled")
         try {
             DisplayFeatureWrapper.setFeature(DC_DIMMING_MODE, enabled, 0)

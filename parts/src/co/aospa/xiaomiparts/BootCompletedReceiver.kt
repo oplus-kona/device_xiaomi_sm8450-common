@@ -12,7 +12,7 @@ import android.content.Intent
 import android.util.Log
 import co.aospa.xiaomiparts.camera.NfcCameraService
 import co.aospa.xiaomiparts.display.ColorService
-import co.aospa.xiaomiparts.display.DcDimmingService
+// import co.aospa.xiaomiparts.display.DcDimmingService
 import co.aospa.xiaomiparts.doze.PocketService
 import co.aospa.xiaomiparts.gestures.GestureUtils
 import co.aospa.xiaomiparts.thermal.ThermalUtils
@@ -29,7 +29,7 @@ class BootCompletedReceiver : BroadcastReceiver() {
 
         Log.i(TAG, "Boot completed, starting services")
         ColorService.startService(context)
-        DcDimmingService.startService(context)
+//        DcDimmingService.startService(context)
         PocketService.startService(context)
         NfcCameraService.startService(context)
         TouchOrientationService.startService(context)
