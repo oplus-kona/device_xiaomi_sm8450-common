@@ -8,10 +8,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    android:layout_width="match_parent" >
+    android:layout_width="match_parent">
 
     <FrameLayout
-        android:id="@android:id/list_container"
+        android:id="@+id/thermal_preference_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

@@ -113,6 +113,20 @@ class ThermalSettingsFragment : PreferenceFragment() {
         appsAdapter = AppsAdapter(activity)
     }
 
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        val prefView = super.onCreateView(inflater, container, savedInstanceState)
+
+        val rootView = inflater.inflate(R.layout.thermal_layout, container, false) as ViewGroup
+
+        rootView.findViewById<ViewGroup>(R.id.thermal_preference_container).addView(prefView)
+
+        return rootView
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         appsRecyclerView =
