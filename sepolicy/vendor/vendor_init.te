@@ -4,6 +4,9 @@ set_prop(vendor_init, vendor_fp_prop)
 set_prop(vendor_init, vendor_ssr_prop)
 set_prop(vendor_init, vendor_thermal_prop)
 
+allow init debugfs_tracing_debug:dir mounton;
+allow init hwservicemanager:binder transfer;
+
 recovery_only(`
 allow init proc:file write;
 ')
