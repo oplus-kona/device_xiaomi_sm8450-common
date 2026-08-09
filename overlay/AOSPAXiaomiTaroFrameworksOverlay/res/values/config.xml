@@ -26,6 +26,11 @@
     <!-- Whether to intercept inputs on screen off -->
     <bool name="config_enableKeyHandler">true</bool>
 
+    <!-- Screen brightness used to dim the screen while dozing in a very low power state.
+         May be less than the minimum allowed brightness setting
+         that can be set by the user. -->
+    <item name="config_screenBrightnessDozeFloat" format="float" type="dimen">0.06667</item>
+
     <!-- Gestures' key codes. If the gesture is not supported set it to 0. -->
     <integer name="config_doubleTapKeyCode">143</integer> <!-- KEY_POWER -->
     <integer name="config_singleTapKeyCode">354</integer> <!-- KEY_GOTO -->
