@@ -69,4 +69,12 @@
          charging enabled status regardless of the current status. -->
     <bool name="config_chargingControlToggleSetAlways">true</bool>
 
+    <!-- Defines the actions shown in advanced reboot submenu -->
+    <string-array name="config_restartActionsList">
+        <item>restart_bootloader</item>
+        <item>restart_recovery</item>
+        <item>restart</item>
+        <item>restart_systemui</item>
+    </string-array>
+
 </resources>
